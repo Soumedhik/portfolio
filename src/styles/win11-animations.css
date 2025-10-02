@@ -1,0 +1,102 @@
+/* Windows 11 Essential Animations */
+
+/* Hardware Acceleration for Performance */
+.win11-desktop-container {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Glass Morphism Effects */
+.win11-glass {
+  backdrop-filter: blur(40px) saturate(1.8);
+  -webkit-backdrop-filter: blur(40px) saturate(1.8);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.win11-glass-hover {
+  backdrop-filter: blur(40px) saturate(2);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Windows 11 Shadows */
+.win11-shadow {
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.win11-shadow-lg {
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover Effects */
+.win11-hover-lift {
+  transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+  transform-origin: center bottom;
+}
+
+.win11-hover-lift:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Button Ripple Effect */
+.win11-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.win11-ripple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.win11-ripple:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Windows 11 Scrollbar Styling */
+.win11-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.win11-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.win11-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.win11-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+  background-clip: content-box;
+}
