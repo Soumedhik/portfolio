@@ -134,7 +134,9 @@ desktop.ini
 *.7z
 
 # Data folder - contains sensitive personal info
-data/
+/data/
+!src/data/
+!src/data/**
 
 # Vercel deployment
 .vercel
