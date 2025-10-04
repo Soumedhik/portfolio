@@ -1,0 +1,5 @@
+# SPA Fallback for all routes
+/*    /index.html   200
+
+# Specific redirects
+/portfolio    /index.html   200

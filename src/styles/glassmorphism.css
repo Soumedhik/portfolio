@@ -1,0 +1,566 @@
+/* Glassmorphism Effects for Windows 11 Taskbar */
+
+.glass-taskbar {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(150deg,
+    color-mix(in srgb, var(--win11-taskbar) 75%, transparent) 0%,
+    color-mix(in srgb, var(--win11-glass-strong) 70%, transparent) 48%,
+    color-mix(in srgb, var(--win11-glass) 90%, transparent) 100%
+  );
+  background-color: color-mix(in srgb, var(--win11-taskbar) 65%, transparent);
+  backdrop-filter: blur(30px) saturate(195%) brightness(1.08);
+  -webkit-backdrop-filter: blur(30px) saturate(195%) brightness(1.08);
+  border-top: 1px solid color-mix(in srgb, var(--win11-glass-border) 90%, rgba(255, 255, 255, 0.45));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 -18px 48px color-mix(in srgb, var(--win11-shadow) 60%, transparent),
+    0 -6px 24px color-mix(in srgb, var(--win11-shadow-light) 70%, transparent),
+    inset 0 1.25px 0 color-mix(in srgb, var(--win11-glass-border) 80%, rgba(255, 255, 255, 0.32));
+  overflow: hidden;
+}
+
+.glass-taskbar::before,
+.glass-taskbar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.glass-taskbar::before {
+  background: linear-gradient(120deg,
+    rgba(59, 130, 246, 0.28) 0%,
+    rgba(147, 51, 234, 0.24) 40%,
+    rgba(6, 182, 212, 0.22) 70%,
+    rgba(59, 130, 246, 0.28) 100%
+  );
+  background-size: 220% 100%;
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  filter: saturate(135%);
+  animation: win11TaskbarGradient 18s ease-in-out infinite;
+  z-index: -2;
+}
+
+.glass-taskbar::after {
+  background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.35) 50%, transparent 75%);
+  opacity: 0.35;
+  transform: translateX(-120%);
+  animation: win11TaskbarShimmer 12s linear infinite;
+  z-index: -1;
+}
+
+.glass-titlebar {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(160deg,
+    color-mix(in srgb, var(--win11-taskbar) 88%, rgba(6, 10, 20, 0.95)) 0%,
+    color-mix(in srgb, var(--win11-glass-strong) 82%, rgba(8, 14, 26, 0.92)) 52%,
+    color-mix(in srgb, var(--win11-glass) 94%, rgba(4, 8, 16, 0.9)) 100%
+  );
+  background-color: color-mix(in srgb, var(--win11-taskbar) 84%, rgba(4, 8, 16, 0.92));
+  backdrop-filter: blur(28px) saturate(210%) brightness(0.92);
+  -webkit-backdrop-filter: blur(28px) saturate(210%) brightness(0.92);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid color-mix(in srgb, var(--win11-glass-border) 85%, rgba(0, 0, 0, 0.55));
+  box-shadow:
+    0 14px 36px color-mix(in srgb, var(--win11-shadow) 65%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--win11-glass-border) 82%, rgba(255, 255, 255, 0.22));
+  overflow: hidden;
+}
+
+.glass-titlebar::before,
+.glass-titlebar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.glass-titlebar::before {
+  background: linear-gradient(125deg,
+    rgba(59, 130, 246, 0.2) 0%,
+    rgba(147, 51, 234, 0.18) 45%,
+    rgba(6, 182, 212, 0.18) 100%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.42;
+  filter: saturate(135%);
+  z-index: -2;
+}
+
+.glass-titlebar::after {
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.28) 55%, transparent 80%);
+  opacity: 0.22;
+  transform: translateX(-120%);
+  animation: win11TaskbarShimmer 16s linear infinite;
+  z-index: -1;
+}
+
+.glass-titlebar {
+  color: rgba(236, 239, 247, 0.88);
+}
+
+.glass-titlebar .titlebar-section {
+  display: flex;
+  align-items: center;
+}
+
+.titlebar-button {
+  width: 2.25rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: color-mix(in srgb, rgba(16, 20, 32, 0.82) 82%, transparent);
+  backdrop-filter: blur(18px) saturate(175%);
+  -webkit-backdrop-filter: blur(18px) saturate(175%);
+  color: rgba(238, 242, 255, 0.88);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 4px 14px rgba(4, 6, 14, 0.32);
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.titlebar-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 60%, transparent 100%);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.titlebar-button:hover {
+  background: color-mix(in srgb, rgba(32, 42, 72, 0.88) 55%, color-mix(in srgb, var(--win11-accent) 28%, transparent));
+  color: #ffffff;
+  transform: translateY(-0.5px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 18px rgba(6, 10, 22, 0.42);
+}
+
+.titlebar-button:active {
+  transform: translateY(0);
+  background: color-mix(in srgb, rgba(12, 16, 26, 0.9) 82%, rgba(0, 0, 0, 0.2));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 3px 10px rgba(4, 6, 12, 0.28);
+}
+
+.titlebar-button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--win11-accent) 55%, rgba(255, 255, 255, 0.35));
+  outline-offset: 2px;
+}
+
+.titlebar-button + .titlebar-button {
+  margin-left: 0.3rem;
+}
+
+.titlebar-button.material-symbols-outlined,
+.titlebar-button span.material-symbols-outlined {
+  font-size: 1.05rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.titlebar-button--close {
+  background: color-mix(in srgb, rgba(244, 63, 94, 0.65) 70%, rgba(28, 6, 12, 0.9));
+  border-color: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.titlebar-button--close::before {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.05));
+  opacity: 0.4;
+}
+
+.titlebar-button--close:hover {
+  background: color-mix(in srgb, rgba(248, 113, 113, 0.88) 72%, rgba(32, 8, 12, 0.86));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 9px 20px rgba(40, 8, 14, 0.5);
+}
+
+.titlebar-button--close:active {
+  background: color-mix(in srgb, rgba(190, 35, 54, 0.92) 78%, rgba(18, 4, 8, 0.88));
+}
+
+.glass-button {
+  background: linear-gradient(145deg,
+    color-mix(in srgb, rgba(59, 130, 246, 0.42) 30%, transparent) 0%,
+    color-mix(in srgb, rgba(147, 51, 234, 0.36) 30%, transparent) 45%,
+    color-mix(in srgb, rgba(6, 182, 212, 0.38) 30%, transparent) 100%
+  );
+  backdrop-filter: blur(16px) saturate(175%);
+  -webkit-backdrop-filter: blur(16px) saturate(175%);
+  border: 1px solid color-mix(in srgb, var(--win11-glass-border) 85%, rgba(255, 255, 255, 0.22));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button:hover {
+  background: linear-gradient(150deg,
+    color-mix(in srgb, rgba(59, 130, 246, 0.55) 40%, transparent) 0%,
+    color-mix(in srgb, rgba(147, 51, 234, 0.48) 40%, transparent) 50%,
+    color-mix(in srgb, rgba(6, 182, 212, 0.5) 40%, transparent) 100%
+  );
+  backdrop-filter: blur(20px) saturate(205%);
+  -webkit-backdrop-filter: blur(20px) saturate(205%);
+  border: 1px solid color-mix(in srgb, var(--win11-glass-border) 95%, rgba(255, 255, 255, 0.3)) !important;
+  box-shadow:
+    0 6px 18px color-mix(in srgb, var(--win11-shadow) 85%, transparent),
+    0 3px 10px color-mix(in srgb, var(--win11-shadow-light) 80%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--win11-glass-border) 95%, rgba(255, 255, 255, 0.38)) !important;
+  transform: translateY(-1px) scale(1.02);
+}
+
+.glass-button:active {
+  transform: translateY(0) scale(0.98);
+  background: linear-gradient(160deg,
+    color-mix(in srgb, rgba(59, 130, 246, 0.46) 30%, rgba(0, 0, 0, 0.08)) 0%,
+    color-mix(in srgb, rgba(147, 51, 234, 0.4) 30%, rgba(0, 0, 0, 0.08)) 50%,
+    color-mix(in srgb, rgba(6, 182, 212, 0.42) 30%, rgba(0, 0, 0, 0.08)) 100%
+  );
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+}
+
+.glass-button:focus-visible,
+.glass-active:focus-visible,
+.glass-minimized:focus-visible,
+.glass-purple-active:focus-visible,
+.icon-container:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--win11-accent) 55%, rgba(255, 255, 255, 0.35));
+  outline-offset: 2px;
+}
+
+.glass-active {
+  background: rgba(0, 120, 212, 0.35) !important;
+  background: color-mix(in srgb, var(--win11-accent) 35%, transparent) !important;
+  backdrop-filter: blur(15px) saturate(200%);
+  -webkit-backdrop-filter: blur(15px) saturate(200%);
+  border: none !important;
+  box-shadow: 
+    0 4px 20px var(--win11-accent-glow),
+    0 2px 10px color-mix(in srgb, var(--win11-accent) 20%, transparent),
+    inset 0 1px 0 var(--win11-glass-border) !important;
+}
+
+.glass-active:hover {
+  background: rgba(0, 120, 212, 0.45) !important;
+  background: color-mix(in srgb, var(--win11-accent) 45%, transparent) !important;
+  border: none !important;
+  box-shadow: 
+    0 6px 24px color-mix(in srgb, var(--win11-accent) 28%, transparent),
+    0 3px 12px color-mix(in srgb, var(--win11-accent) 18%, transparent),
+    inset 0 1px 0 var(--win11-glass-border) !important;
+}
+
+.glass-minimized {
+  background: rgba(0, 120, 212, 0.2) !important;
+  background: color-mix(in srgb, var(--win11-accent) 20%, transparent) !important;
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: none;
+  opacity: 0.8;
+}
+
+.glass-purple-active {
+  background: rgba(147, 51, 234, 0.35) !important;
+  background: color-mix(in srgb, #9333ea 35%, transparent) !important;
+  backdrop-filter: blur(15px) saturate(200%);
+  -webkit-backdrop-filter: blur(15px) saturate(200%);
+  border: none !important;
+  box-shadow: 
+    0 4px 20px color-mix(in srgb, #9333ea 24%, transparent),
+    0 2px 10px color-mix(in srgb, #9333ea 14%, transparent),
+    inset 0 1px 0 var(--win11-glass-border) !important;
+}
+
+.glass-purple-active:hover {
+  background: rgba(147, 51, 234, 0.45) !important;
+  background: color-mix(in srgb, #9333ea 45%, transparent) !important;
+  border: none !important;
+  box-shadow: 
+    0 6px 24px color-mix(in srgb, #9333ea 30%, transparent),
+    0 3px 12px color-mix(in srgb, #9333ea 18%, transparent),
+    inset 0 1px 0 var(--win11-glass-border) !important;
+}
+
+/* Floating animation for active indicators */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.glass-indicator {
+  animation: float 2s ease-in-out infinite;
+  background: linear-gradient(90deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.95) 50%,
+    rgba(255, 255, 255, 0.65) 100%
+  );
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--win11-glass-border) 85%, rgba(255, 255, 255, 0.2));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-indicator {
+    animation: none;
+  }
+
+  .glass-taskbar::before,
+  .glass-taskbar::after {
+    animation: none;
+  }
+}
+
+@keyframes win11TaskbarGradient {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.45;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.65;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.45;
+  }
+}
+
+@keyframes win11TaskbarShimmer {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0.18;
+  }
+  40% {
+    opacity: 0.38;
+  }
+  50% {
+    transform: translateX(120%);
+    opacity: 0.28;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0.1;
+  }
+}
+
+/* System tray enhancements */
+.glass-system-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-system-icon:hover {
+  filter: drop-shadow(0 0 8px var(--win11-accent-glow));
+}
+
+
+.calc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.calc-btn:active {
+  transform: scale(0.95);
+}
+
+/* Number buttons - gray */
+.calc-btn-number {
+  background-color: #505050;
+  color: #ffffff;
+}
+
+.calc-btn-number:hover {
+  background-color: #606060;
+}
+
+/* Function buttons - light gray */
+.calc-btn-function {
+  background-color: #a6a6a6;
+  color: #000000;
+}
+
+.calc-btn-function:hover {
+  background-color: #b6b6b6;
+}
+
+/* Operator buttons - orange */
+.calc-btn-operator {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+.calc-btn-operator:hover {
+  background-color: #ffad33;
+}
+
+/* Equals button - orange (same as operator) */
+.calc-btn-equals {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+.calc-btn-equals:hover {
+  background-color: #ffad33;
+}
+
+/* Smooth icon rendering - Windows 11 style */
+.taskbar-icon {
+  image-rendering: auto;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  filter: contrast(1.03) brightness(1.03) saturate(1.08);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  object-fit: contain;
+  object-position: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, filter;
+  /* Ensure crisp edges */
+  image-rendering: optimizeQuality;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  /* Force hardware acceleration */
+  transform: translate3d(0, 0, 0);
+}
+
+.taskbar-icon:hover {
+  filter: contrast(1.1) brightness(1.1) saturate(1.2) drop-shadow(0 3px 6px rgba(0,0,0,0.15));
+  transform: translate3d(0, 0, 0) scale(1.03);
+}
+
+/* Enhanced icon containers */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.icon-container::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon-container:hover::before {
+  opacity: 0.7;
+}
+
+.win11-icon-shell {
+  background: transparent;
+  border-radius: 14px;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.win11-icon-shell:hover {
+  background: color-mix(in srgb, rgba(255, 255, 255, 0.65) 12%, transparent);
+  backdrop-filter: blur(18px) saturate(165%);
+  -webkit-backdrop-filter: blur(18px) saturate(165%);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.win11-icon-shell:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22);
+}
+
+/* Force high-quality scaling for PNG icons */
+.taskbar-icon[src*=".png"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: auto;
+}
+
+/* Ensure SVG icons render smoothly */
+.taskbar-icon[src*=".svg"] {
+  image-rendering: auto;
+  shape-rendering: geometricPrecision;
+}
+
+/* Material icons smoothing */
+.material-symbols-outlined {
+  font-variation-settings: 
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Global image quality improvements */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Taskbar specific quality enhancements */
+.glass-taskbar img,
+.glass-button img,
+.taskbar-icon {
+  image-rendering: auto !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+/* Remove all possible borders and outlines from taskbar buttons */
+.glass-button,
+.glass-active,
+.glass-minimized,
+.glass-purple-active,
+.icon-container {
+  border: none !important;
+  outline: none !important;
+}
+
+.glass-button:focus,
+.glass-active:focus,
+.glass-minimized:focus,
+.glass-purple-active:focus,
+.icon-container:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Prevent pixelation on high DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .taskbar-icon {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}

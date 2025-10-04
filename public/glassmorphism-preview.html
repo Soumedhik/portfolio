@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11 Glassmorphism Taskbar Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        /* Add some background elements for testing blur effect */
+        .background-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        
+        .background-content h1 {
+            font-size: 4rem;
+            margin: 0;
+            opacity: 0.7;
+        }
+        
+        .background-content p {
+            font-size: 1.5rem;
+            opacity: 0.5;
+            margin: 20px 0;
+        }
+        
+        /* Glassmorphism taskbar preview */
+        .glass-taskbar-preview {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 48px;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0.05) 50%,
+                rgba(255, 255, 255, 0.02) 100%
+            );
+            backdrop-filter: blur(20px) saturate(180%) brightness(1.1);
+            -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(1.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 -4px 32px rgba(0, 0, 0, 0.1),
+                0 -2px 16px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            z-index: 100;
+        }
+        
+        .glass-button-preview {
+            width: 40px;
+            height: 32px;
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border: none;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+        
+        .glass-button-preview:hover {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            border: none;
+            box-shadow: 
+                0 4px 16px rgba(0, 0, 0, 0.1),
+                0 2px 8px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px) scale(1.02);
+        }
+        
+        .glass-button-preview:active {
+            transform: translateY(0) scale(0.98);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-button-active {
+            background: rgba(59, 130, 246, 0.3) !important;
+            backdrop-filter: blur(15px) saturate(200%);
+            -webkit-backdrop-filter: blur(15px) saturate(200%);
+            border: none;
+            box-shadow: 
+                0 4px 20px rgba(59, 130, 246, 0.2),
+                0 2px 10px rgba(59, 130, 246, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-button-active:hover {
+            background: rgba(59, 130, 246, 0.4) !important;
+            border: none;
+            box-shadow: 
+                0 6px 24px rgba(59, 130, 246, 0.3),
+                0 3px 12px rgba(59, 130, 246, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .notification-text {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 200;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-content">
+        <h1>Windows 11</h1>
+        <p>Glassmorphism Taskbar Preview</p>
+        <p>🪟 Authentic Windows 11 glass effects with blur, transparency, and hover animations</p>
+    </div>
+    
+    <div class="notification-text">
+        ✅ Perfect! Completely clean icons with NO background covering - pure Windows 11 style! �
+    </div>
+    
+    <div class="glass-taskbar-preview">
+        <div class="glass-button-preview">
+            <img src="/images/apps/windows.png" alt="Windows" style="height: 20px; image-rendering: auto; filter: contrast(1.02) brightness(1.02);">
+        </div>
+        <div class="glass-button-preview">
+            <img src="/images/apps/explorer.png" alt="Explorer" style="height: 18px; image-rendering: auto; filter: contrast(1.02) brightness(1.02);">
+        </div>
+        <div class="glass-button-preview glass-button-active">
+            <img src="/images/apps/edge.png" alt="Edge" style="height: 20px; image-rendering: auto; filter: contrast(1.02) brightness(1.02);">
+        </div>
+        <div class="glass-button-preview">
+
+        </div>
+        <div class="glass-button-preview">🤖</div>
+        <div class="glass-button-preview">⚙️</div>
+        <div class="glass-button-preview">🔔</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "short_name": "Soumedhik Portfolio",
+  "name": "Soumedhik Portfolio - Official Website of Soumedhik Bharati",
+  "description": "Official Soumedhik Portfolio - Comprehensive showcase of Soumedhik Bharati's AI engineering expertise, machine learning research at Carnegie Mellon University, and innovative projects. Interactive Windows 11-style portfolio.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "profile.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#0078d4",
+  "background_color": "#1e1e1e",
+  "categories": ["portfolio", "education", "productivity"],
+  "lang": "en-US",
+  "scope": "/",
+  "prefer_related_applications": false
+}

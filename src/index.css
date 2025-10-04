@@ -1,0 +1,919 @@
+#not-mobile-friendly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  place-content: center;
+  color: var(--win11-text);
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  backdrop-filter: blur(36px);
+  -webkit-backdrop-filter: blur(36px);
+  background-color: color-mix(in srgb, var(--win11-taskbar-solid) 80%, transparent);
+  gap: 1em;
+}
+
+#not-mobile-friendly #titolo-errore {
+  font-size: 6vw;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  font-weight: bolder;
+}
+
+#dettagli-errore {
+  font-size: 2.5vw;
+  color: var(--win11-text-secondary);
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glassmorphism Effects */
+@import './styles/glassmorphism.css';
+
+/* Performance Critical CSS - Loaded First */
+html {
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* GPU Acceleration for better performance */
+.will-change-transform,
+.animate-pulse,
+.animate-spin,
+.animate-bounce {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Critical layout styles to prevent CLS */
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Preload critical images to improve LCP */
+.critical-image {
+  content-visibility: auto;
+}
+
+/* Optimize video background for faster rendering */
+video {
+  object-fit: cover;
+  transform: translate3d(0, 0, 0);
+}
+
+/* CSS Variables for Windows 11 Color Scheme - Unified System */
+:root {
+  /* Windows 11 Unified Color System (matches tailwind.config.js) */
+  --win11-bg: #1e1e1e;
+  --win11-surface: #171717;
+  --win11-surface-hover: #404040;
+  --win11-surface-pressed: #525252;
+  --win11-surface-muted: #262626;
+  
+  --win11-border: #404040;
+  --win11-border-subtle: #262626;
+  --win11-border-strong: rgba(255, 255, 255, 0.2);
+  
+  --win11-text: #ffffff;
+  --win11-text-secondary: #d4d4d4;
+  --win11-text-disabled: #737373;
+  
+  --win11-accent: #0078d4;
+  --win11-accent-hover: #106ebe;
+  --win11-accent-pressed: #005a9e;
+  --win11-accent-text: #ffffff;
+  --win11-accent-glow: rgba(0, 120, 212, 0.2);
+  --win11-tooltip-bg: rgba(12, 36, 80, 0.75);
+  
+  --win11-success: #107c10;
+  --win11-warning: #ffc83d;
+  --win11-error: #d13438;
+  --win11-info: #0078d4;
+  
+  --win11-taskbar: rgba(23, 23, 23, 0.92);
+  --win11-taskbar-solid: #151515;
+  --win11-glass: rgba(255, 255, 255, 0.04);
+  --win11-glass-strong: rgba(255, 255, 255, 0.16);
+  --win11-glass-hover: rgba(255, 255, 255, 0.1);
+  --win11-glass-border: rgba(255, 255, 255, 0.18);
+  
+  --win11-shadow: rgba(0, 0, 0, 0.35);
+  --win11-shadow-light: rgba(0, 0, 0, 0.12);
+  --win11-shadow-soft: rgba(0, 0, 0, 0.2);
+  
+  /* Gradients */
+  --win11-gradient-purple-blue: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  --win11-gradient-accent: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+  
+  /* Legacy compatibility - map old variables to new */
+  --w11-bg-primary: var(--win11-bg);
+  --w11-surface: var(--win11-surface);
+  --w11-text-primary: var(--win11-text);
+  --w11-accent-blue: var(--win11-accent);
+  --glass-white-color: var(--win11-glass-hover);
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--win11-bg);
+  font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+  font-size: 14px; /* Making base font size smaller */
+}
+.context-menu {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.cursor-custom {
+  cursor: crosshair;
+}
+#content {
+  height: 100vh;
+}
+
+#w11-start-section {
+  color: var(--win11-text);
+  display: grid;
+  transition-duration: 200ms;
+  width: 40em;
+  border-radius: 1em;
+  position: absolute;
+  overflow: hidden;
+  border: 2px solid var(--win11-glass-border);
+  transition-timing-function: ease-in-out;
+  user-select: none;
+}
+
+.padding-start:not(#footer-start-section) {
+  padding: 0 2em 1em 2em;
+}
+
+.app-icon {
+  transition: background-color 0.2s ease;
+}
+
+.app-icon:hover {
+  background-color: var(--win11-glass-hover) !important;
+}
+#cerca-input-start:focus {
+  outline: none;
+}
+#cerca-input-start {
+  background-color: rgba(23, 23, 23, 0.85);
+  background-color: color-mix(in srgb, var(--win11-surface) 85%, transparent);
+  padding: 0 1em;
+  box-sizing: border-box;
+  color: var(--win11-text);
+  width: 100%;
+  height: 2.3em;
+  font-size: 1em;
+  border-radius: 1.4em;
+  border: 1px solid var(--win11-border-subtle);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#cerca-input-start::placeholder {
+  color: var(--win11-text-disabled);
+}
+
+.input-div-start {
+  padding: 2em 2em 0 2em;
+}
+
+.app-container-header {
+  font-size: 0.95em;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 1.5em 1em;
+  align-items: center;
+}
+
+.app-container-header div {
+  background-color: var(--win11-glass);
+  padding: 0.2em 0.2em 0.2em 0.5em;
+  border-radius: 0.5em;
+  transition-duration: 0.2s;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.app-container-header div:hover {
+  background-color: var(--win11-glass-hover);
+  transition-duration: 0.5s;
+  border-top: none;
+}
+
+.app-container-header div svg {
+  padding: 0 0 0 0.5em;
+  fill: white !important;
+}
+
+#second-app-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5em;
+}
+
+#second-app-container div {
+  aspect-ratio: 1;
+  border-radius: 0.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+  cursor: pointer;
+}
+
+#second-app-container div:hover {
+  background-color: var(--win11-glass-hover);
+  transition-duration: 0.1s;
+}
+
+#second-app-container img {
+  aspect-ratio: 1;
+  width: 2.5rem;
+  margin: 0.1em;
+}
+
+#second-app-container span {
+  font-size: 0.7em;
+  font-weight: lighter;
+  color: var(--win11-text-secondary);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#second-app-container > div:active img {
+  transform: scale(0.8);
+  transition-duration: 0.3s;
+}
+
+#second-app-container > div img {
+  transition-duration: 0.3s;
+}
+
+label input {
+  display: none;
+}
+
+.recent:hover {
+  background-color: var(--win11-glass-hover) !important;
+}
+
+#article-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+#article-container img {
+  height: 35px;
+  width: auto;
+  padding: 0.3em 0 0 1em;
+}
+
+#article-container > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  align-items: center;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+#article-container > div:hover {
+  background-color: var(--win11-glass-hover);
+  transition-duration: 0.5s;
+}
+
+#article-container > div > div:nth-child(2) > div:nth-child(1) {
+  font-size: 0.9em;
+}
+
+#article-container > div > div:nth-child(2) > div:nth-child(2) {
+  font-size: 0.8em;
+  margin-top: 0.2em;
+  opacity: 0.7;
+}
+
+#footer-start-section {
+  height: 4em;
+  backdrop-filter: blur(24px);
+  background-color: var(--win11-taskbar);
+  outline: 1px solid var(--win11-glass-border);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 4em;
+  align-items: center;
+  margin-top: 0.8em;
+}
+
+.nome-utente-start-section,
+.spegni-pc-start-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  transition-duration: 0.2s;
+  border-radius: 0.5em;
+}
+
+.nome-utente-start-section:hover,
+.spegni-pc-start-section:hover {
+  background-color: var(--win11-glass-hover);
+  transition-duration: 0.3s;
+}
+
+.nome-utente-start-section svg {
+  height: 1.7em;
+  width: auto;
+  fill: var(--win11-text) !important;
+}
+
+.spegni-pc-start-section svg {
+  height: 1.7em;
+  width: auto;
+  fill: var(--win11-text) !important;
+}
+
+#first-container div:active > img,
+#first-container div:active > svg {
+  transform: scale(0.5);
+  transition-duration: 0.5s;
+}
+
+#first-container img,
+#first-container svg {
+  transition-duration: 0.5s;
+}
+
+#first-container > div[title]:hover::after,
+#sistema-info > div[title]:hover::after,
+#sistema-data[title]:hover::after {
+  content: attr(title);
+  color: var(--win11-text);
+  position: absolute;
+  transform: translateY(calc(-100% - 1em));
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--win11-glass-border);
+  border-radius: 0.5em;
+  font-size: 0.9em;
+  background-color: var(--win11-tooltip-bg);
+  transition-duration: 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(calc(-100% - 3em));
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#sistema-info > div[title]:hover::after {
+  transform: translateY(calc(-100% - 2em));
+  font-size: 0.6em;
+}
+
+.dropdown-top .dropdown-content {
+  bottom: 120%;
+  top: auto;
+  transform-origin: bottom;
+  left: -110px;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+  background-clip: content-box;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Optimization Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Increase base font size for mobile */
+    overflow-x: hidden;
+    touch-action: manipulation; /* Disable double-tap zoom */
+  }
+
+  /* Make touch targets larger */
+  .app-icon, button, a {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Optimize start menu for mobile */
+  #w11-start-section {
+    width: 95vw;
+    max-width: 400px;
+    left: 50% !important;
+    transform: translateX(-50%);
+    bottom: 80px;
+  }
+
+  /* Mobile taskbar adjustments */
+  .taskbar {
+    height: 60px;
+    padding: 0 8px;
+  }
+
+  .taskbar .app-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 4px;
+  }
+
+  /* App window mobile optimization */
+  .draggable-window {
+    width: 95vw !important;
+    height: 85vh !important;
+    left: 2.5vw !important;
+    top: 5vh !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  /* Mobile app content */
+  .app-content {
+    padding: 16px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Contact cards mobile */
+  .contact-card {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* About Me sections mobile */
+  .about-section {
+    max-height: 60vh;
+    padding: 12px;
+  }
+
+  .about-section h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .about-section p, .about-section li {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Login page mobile */
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .login-button {
+    padding: 16px 32px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  /* Right side apps mobile - stack vertically */
+  .right-apps-container {
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+  }
+
+  /* Pictures app mobile */
+  .pictures-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .picture-item {
+    aspect-ratio: 1;
+    border-radius: 8px;
+  }
+
+  /* Scrollbar mobile optimization */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+  }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  #w11-start-section {
+    width: 35em;
+  }
+
+  .draggable-window {
+    width: 85vw !important;
+    height: 80vh !important;
+  }
+
+  .app-content {
+    padding: 20px 16px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .app-icon, .login-avatar, .contact-avatar {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .draggable-window {
+    height: 90vh !important;
+    top: 2vh !important;
+  }
+
+  .about-section {
+    max-height: 70vh;
+  }
+
+  .taskbar {
+    height: 50px;
+  }
+
+  .taskbar .app-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+  }
+}
+
+/* Smooth canvas animations */
+canvas {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Responsive Design Utilities */
+@media (max-width: 768px) {
+  /* Mobile optimizations */
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  /* Taskbar scaling for mobile */
+  .taskbar-mobile {
+    height: 3rem !important;
+  }
+  
+  /* Window adjustments for mobile */
+  .window-mobile {
+    width: 100vw !important;
+    height: calc(100vh - 3rem) !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet optimizations */
+  .mobile-only {
+    display: none !important;
+  }
+  
+  /* Taskbar scaling for tablet */
+  .taskbar-tablet {
+    height: 3.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Desktop optimizations */
+  .mobile-only, .tablet-only {
+    display: none !important;
+  }
+}
+
+/* Proportional scaling for different screen sizes */
+@media (max-width: 480px) {
+  .responsive-icon-xs {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+  
+  .responsive-container-xs {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .responsive-text-xs {
+    font-size: 0.75rem !important;
+    line-height: 1 !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .responsive-icon-sm {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  
+  .responsive-container-sm {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  
+  .responsive-text-sm {
+    font-size: 0.875rem !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .responsive-icon-md {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .responsive-container-md {
+    width: 4.5rem !important;
+    height: 4.5rem !important;
+  }
+}
+
+/* Touch optimizations for mobile */
+@media (pointer: coarse) {
+  .touch-target {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  .hover-effect:active {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  /* Disable hover effects on touch devices */
+  .touch-device .hover\\:bg-white:hover {
+    background-color: transparent !important;
+  }
+}
+
+/* Landscape orientation preference for mobile */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  body::before {
+    content: "For best experience, please rotate your device to landscape mode";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    z-index: 9999;
+    text-align: center;
+    font-size: 0.875rem;
+    pointer-events: none;
+  }
+}
+
+/* Windows 11 Volume Slider Styles */
+.win11-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.win11-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.win11-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background: linear-gradient(135deg, #ffffff, #e8e8e8);
+}
+
+.win11-slider::-webkit-slider-thumb:active {
+  transform: scale(1.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.win11-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.win11-slider::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #ffffff, #e8e8e8);
+}
+
+.win11-slider::-moz-range-thumb:active {
+  transform: scale(1.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Remove default Firefox track styling */
+.win11-slider::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+
+/* Volume control hover effects */
+.volume-control {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.volume-control:hover {
+  transform: translateY(-1px);
+}
+
+.volume-control:active {
+  transform: translateY(0);
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .no-print, .taskbar, .context-menu, .volume-slider {
+    display: none !important;
+  }
+}
+
+/* Windows 11 Utility Classes */
+@layer utilities {
+  /* Glass morphism utilities */
+  .win11-glass-surface {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .win11-glass-surface-hover {
+    @apply hover:bg-white/10 hover:border-white/20 transition-all duration-300;
+  }
+  
+  /* Button utilities */
+  .win11-button-primary {
+    @apply px-4 py-2 rounded-md bg-win11-accent text-white
+           hover:bg-win11-accent-hover active:bg-win11-accent-pressed
+           transition-colors duration-200 font-medium;
+  }
+  
+  .win11-button-secondary {
+    @apply px-4 py-2 rounded-md bg-win11-surface border border-win11-border
+           text-win11-text hover:bg-win11-surface-hover
+           transition-colors duration-200 font-medium;
+  }
+  
+  .win11-button-ghost {
+    @apply px-4 py-2 rounded-md bg-transparent text-win11-text
+           hover:bg-white/10 transition-colors duration-200;
+  }
+  
+  /* Gradient utilities */
+  .win11-gradient-purple-blue {
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  }
+  
+  .win11-gradient-accent {
+    background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+  }
+  
+  /* Icon container utility */
+  .win11-icon-container {
+    @apply bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg
+           flex items-center justify-center text-white;
+  }
+  
+  /* Hover lift effect */
+  .win11-hover-lift {
+    @apply hover:bg-white hover:bg-opacity-20 transition-all duration-200;
+  }
+  
+  /* Shadow utilities */
+  .win11-shadow {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .win11-shadow-lg {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Focus ring utility */
+  .win11-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-win11-accent 
+           focus:ring-offset-2 focus:ring-offset-win11-bg;
+  }
+}
