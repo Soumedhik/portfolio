@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useWindowSizing } from "../../hooks/useWindowSizing";
 
-const TYPING_DELAY_MS = 80;
+const TYPING_DELAY_MS = 50;
 const WELCOME_MESSAGE = "Hi! I am Soumedhik. Ask me anything about my research, projects, skills, or experience!";
 
 const Notepad = memo(({ isAppOpen, toggleNotepad, bounds, minimizeWindow, isMinimized }) => {
