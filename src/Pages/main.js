@@ -505,62 +505,9 @@ function Main({ isMobile = false }) {
         fallbackImage="/wallpaper.jpg"
         className="win11-desktop-background"
       />
-      <section
-        aria-label="Soumedhik Bharati introduction"
-        className="sr-only lg:not-sr-only pointer-events-none fixed bottom-[calc(4rem+1.5rem)] left-6 right-6 z-30"
-      >
-        <article className="pointer-events-auto mx-auto max-w-3xl rounded-3xl border border-white/10 bg-black/70 p-6 text-white shadow-2xl backdrop-blur-xl">
-          <h1 className="text-3xl font-semibold leading-tight">Hi 👋, I'm Soumedhik Bharati</h1>
-          <p className="mt-4 text-sm leading-relaxed text-gray-200 md:text-base">
-            I design human-centered AI systems that blend rigorous research with production-grade engineering. From transformer-based emotion decoding and quantum dynamics modeling to retrieval-augmented generation for enterprises, my work translates complex ideas into reliable tools for researchers, clinicians, and product teams.
-          </p>
-          <p className="mt-4 text-sm leading-relaxed text-gray-200 md:text-base">
-            I thrive in cross-disciplinary teams, spearheading collaborations across Carnegie Mellon University, IIT Kharagpur, and industry partners. Recent highlights include accelerating zero-shot seizure prediction by 12%, winning global hackathons, and mentoring student researchers on ethical, real-world AI deployments.
-          </p>
-          <h2 className="mt-6 text-2xl font-semibold text-white">Research Focus</h2>
-          <p className="mt-2 text-sm leading-relaxed text-gray-200 md:text-base">
-            My current research advances affective EEG decoding, generative language assessment, and physics-informed models. I build pipelines that unite spectral biomarkers, cross-attention architectures, and reinforcement learning to deliver interpretable, high-accuracy systems ready for clinical and industrial adoption.
-          </p>
-          <h2 className="mt-6 text-2xl font-semibold text-white">Core Technologies</h2>
-          <p className="mt-2 text-sm leading-relaxed text-gray-200 md:text-base">
-            Daily toolkit: Python, PyTorch, TensorFlow, scikit-learn, Transformers, LangChain, and modern MLOps stacks. I pair these with thoughtful UX patterns, data storytelling, and reproducible experimentation to move prototypes into dependable products.
-          </p>
-          <h2 className="mt-6 text-2xl font-semibold text-white">Connect with me</h2>
-          <ul className="mt-2 flex flex-wrap gap-4 text-sm font-medium md:text-base">
-            <li>
-              <a
-                href="https://www.linkedin.com/in/soumedhik-bharati/"
-                className="text-sky-300 transition hover:text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Soumedhik"
-                className="text-sky-300 transition hover:text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:soumedhikbharati@gmail.com"
-                className="text-sky-300 transition hover:text-white"
-              >
-                Email
-              </a>
-            </li>
-          </ul>
-        </article>
-      </section>
-      <SoundEffects />
-  <Torch input={input} setInput={setInput} />
-  <div className="relative h-[100dvh] min-h-[100dvh]" ref={constraintsRef}>
+    <SoundEffects />
+    <Torch input={input} setInput={setInput} />
+    <div className="relative h-[100dvh] min-h-[100dvh]" ref={constraintsRef}>
         <div 
           className="relative h-full w-full top-0 left-0 z-10 text-white"
           onClick={handleDesktopClick}
