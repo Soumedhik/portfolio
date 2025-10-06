@@ -252,7 +252,7 @@ Performance Optimizations: Faster load times and better resource management
 4. 🎯 Track user experience improvements
 
 **Estimated Deployment Time**: 2-3 minutes  
-**Live URL**: https://soumedhiks-portfolio.vercel.app
+**Live URL**: https://soumedhik.tech
 
 ---
 

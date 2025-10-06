@@ -6,56 +6,56 @@
   
   <!-- Main Portfolio Page -->
   <url>
-    <loc>https://soumedhiks-portfolio.vercel.app/</loc>
-    <lastmod>2025-10-03</lastmod>
+  <loc>https://soumedhik.tech/</loc>
+  <lastmod>2025-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- About/Resume Section -->
   <url>
-    <loc>https://soumedhiks-portfolio.vercel.app/about</loc>
-    <lastmod>2025-10-03</lastmod>
+  <loc>https://soumedhik.tech/about</loc>
+  <lastmod>2025-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Projects Showcase -->
   <url>
-    <loc>https://soumedhiks-portfolio.vercel.app/projects</loc>
-    <lastmod>2025-10-03</lastmod>
+  <loc>https://soumedhik.tech/projects</loc>
+  <lastmod>2025-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Research Experience -->
   <url>
-    <loc>https://soumedhiks-portfolio.vercel.app/research</loc>
-    <lastmod>2025-10-03</lastmod>
+  <loc>https://soumedhik.tech/research</loc>
+  <lastmod>2025-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Skills and Expertise -->
   <url>
-    <loc>https://soumedhiks-portfolio.vercel.app/skills</loc>
-    <lastmod>2025-10-03</lastmod>
+  <loc>https://soumedhik.tech/skills</loc>
+  <lastmod>2025-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Contact Information -->
   <url>
-    <loc>https://soumedhiks-portfolio.vercel.app/contact</loc>
-    <lastmod>2025-10-03</lastmod>
+  <loc>https://soumedhik.tech/contact</loc>
+  <lastmod>2025-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Resume/CV Download -->
   <url>
-    <loc>https://soumedhiks-portfolio.vercel.app/resume</loc>
-    <lastmod>2025-10-03</lastmod>
+  <loc>https://soumedhik.tech/resume</loc>
+  <lastmod>2025-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

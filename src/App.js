@@ -28,13 +28,17 @@ function App() {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Soumedhik's Portfolio",
-      "url": "https://soumedhiks-portfolio.vercel.app/",
+      "url": "https://soumedhik.tech/",
       "description": "Interactive portfolio of Soumedhik Bharati - AI Engineer & Problem Solver",
       "author": {
         "@type": "Person",
         "name": "Soumedhik Bharati",
         "jobTitle": "AI Engineer & Problem Solver"
-      }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/soumedhik-bharati/",
+        "https://github.com/Soumedhik"
+      ]
     });
     document.head.appendChild(script);
 

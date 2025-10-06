@@ -2,7 +2,7 @@
   "name": "soumedhik-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://soumedhiks-portfolio.vercel.app",
+  "homepage": "https://soumedhik.tech",
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -28,7 +28,7 @@
     "eject": "react-scripts eject",
     "serve": "serve -s build",
     "analyze": "npm run build && npx webpack-bundle-analyzer build/static/js/*.js",
-    "lighthouse": "lighthouse https://soumedhiks-portfolio.vercel.app --output html --output-path ./lighthouse-report.html",
+  "lighthouse": "lighthouse https://soumedhik.tech --output html --output-path ./lighthouse-report.html",
     "perf": "npm run build && npm run serve"
   },
   "eslintConfig": {
