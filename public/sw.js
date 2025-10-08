@@ -4,14 +4,14 @@ const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
-  '/profile.jpg',
-  '/lockscreen.jpg',
-  '/images/apps/chrome.png',
-  '/images/apps/explorer.png',
-  '/images/apps/folder.png',
-  '/images/folders/resume.png',
-  '/images/folders/skills.png',
-  '/images/folders/projects.png'
+  '/assets/branding/profile.jpg',
+  '/assets/backgrounds/lockscreen.jpg',
+  '/assets/icons/apps/chrome.png',
+  '/assets/icons/apps/explorer.png',
+  '/assets/icons/apps/folder.png',
+  '/assets/icons/folders/resume.png',
+  '/assets/icons/folders/skills.png',
+  '/assets/icons/folders/projects.png'
 ];
 
 // Install event - cache resources

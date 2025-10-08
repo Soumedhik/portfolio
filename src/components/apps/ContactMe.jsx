@@ -126,7 +126,7 @@ const ContactMe = ({ isContactMeOpen, toggleContactMe, bounds, minimizeWindow, i
               <div className="text-center mb-8">
                 <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-500/50 shadow-xl">
                   <img 
-                    src="/profile.jpg" 
+                    src="/assets/branding/profile.jpg" 
                     alt="Soumedhik Bharati"
                     className="w-full h-full object-cover"
                     onError={(e) => {

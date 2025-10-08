@@ -74,7 +74,7 @@ export default function Slider({ isMenuOpen, toggleMenu }) {
         toggleMenu();
       }}
       style={{
-        background: "url(/lockscreen.jpg)",
+  background: "url(/assets/backgrounds/lockscreen.jpg)",
         backgroundSize: "cover",
       }}
     >

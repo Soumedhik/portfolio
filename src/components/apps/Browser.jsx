@@ -72,7 +72,7 @@ const AddressBar = ({ name }) => (
           {name && <div className="text-white text-xs font-normal">{generateInitials(name)}</div>}
         </div>
       </div>
-      <img src="/images/options/dots.png" alt="options" className="h-4 w-4 rotate-90 opacity-60" />
+  <img src="/assets/icons/ui/dots.png" alt="options" className="h-4 w-4 rotate-90 opacity-60" />
     </div>
   </div>
 );

@@ -75,7 +75,7 @@ const Pictures = memo(({ isAppOpen, togglePictures, bounds, minimizeWindow, isMi
           <div className="title-bar glass-titlebar">
             <div className="h-9 flex items-center justify-between px-3 select-none">
               <div className="flex items-center gap-2 font-normal titlebar-section">
-                <img src="/pic_logo.png" alt="Pictures" className="w-4 h-4" />
+                <img src="/assets/branding/pic_logo.png" alt="Pictures" className="w-4 h-4" />
                 <span>Pictures</span>
               </div>
               <div className="flex items-center titlebar-section">
@@ -124,7 +124,7 @@ const Pictures = memo(({ isAppOpen, togglePictures, bounds, minimizeWindow, isMi
                     onClick={() => openImage(picture)}
                   >
                     <img
-                      src={`/pictures/${picture}`}
+                      src={`/assets/gallery/${picture}`}
                       alt={`Gallery item ${index + 1}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -166,7 +166,7 @@ const Pictures = memo(({ isAppOpen, togglePictures, bounds, minimizeWindow, isMi
             
             {/* Main Image */}
             <img
-              src={`/pictures/${selectedImage}`}
+              src={`/assets/gallery/${selectedImage}`}
               alt={`Preview of ${selectedImage}`}
               className="max-w-[85vw] max-h-[85vh] object-contain rounded-lg"
             />

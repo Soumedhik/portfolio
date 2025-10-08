@@ -281,7 +281,7 @@ Your response:`;
           <div className="title-bar glass-titlebar">
             <div className="h-9 flex items-center justify-between px-4 text-sm select-none">
               <div className="font-normal flex items-center gap-2 text-win11-text-secondary titlebar-section">
-                <img src="/ai.png" alt="AI Chatbot" className="w-4 h-4" />
+                <img src="/assets/branding/ai.png" alt="AI Chatbot" className="w-4 h-4" />
                 <span className="text-win11-text">AI Assistant - Notepad</span>
               </div>
               <div className="flex items-center titlebar-section">

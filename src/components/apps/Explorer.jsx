@@ -146,7 +146,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
               <div className="flex justify-between items-center w-full">
                 <div className="pl-2 text-xs flex text-win11-text-secondary">
                   <img
-                    src={`/images/folders/${icon}.png`}
+                    src={`/assets/icons/folders/${icon}.png`}
                     alt="main icons"
                     className="w-5 h-5 mr-2"
                   />
@@ -205,7 +205,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
               <div className="flex items-center">
                 <div className="flex items-center justify-center w-24 h-full text-xs gap-1 border-win11-border border-r opacity-45">
                   <img
-                    src="/images/options/new.png"
+                    src="/assets/icons/ui/new.png"
                     alt="new"
                     className="w-5 h-5"
                   />
@@ -217,42 +217,42 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                 <div className="flex h-full items-center gap-3 px-4 border-win11-border border-r opacity-45">
                   <div className="flex items-center justify-center w-8 h-8 rounded-md hover:bg-win11-glass-hover transition-colors duration-200">
                     <img
-                      src="/images/options/cut.png"
+                      src="/assets/icons/ui/cut.png"
                       alt="cut"
                       className="h-5 w-5"
                     />
                   </div>
                   <div className="flex items-center justify-center w-8 h-8 rounded-md hover:bg-win11-glass-hover transition-colors duration-200">
                     <img
-                      src="/images/options/copy.png"
+                      src="/assets/icons/ui/copy.png"
                       alt="copy"
                       className="h-5 w-5"
                     />
                   </div>
                   <div className="flex items-center justify-center w-8 h-8 rounded-md hover:bg-win11-glass-hover transition-colors duration-200">
                     <img
-                      src="/images/options/paste.png"
+                      src="/assets/icons/ui/paste.png"
                       alt="paste"
                       className="h-5 w-5"
                     />
                   </div>
                   <div className="flex items-center justify-center w-8 h-8 rounded-md hover:bg-win11-glass-hover transition-colors duration-200">
                     <img
-                      src="/images/options/rename.png"
+                      src="/assets/icons/ui/rename.png"
                       alt="rename"
                       className="h-5 w-5"
                     />
                   </div>
                   <div className="flex items-center justify-center w-8 h-8 rounded-md hover:bg-win11-glass-hover transition-colors duration-200">
                     <img
-                      src="/images/options/share.png"
+                      src="/assets/icons/ui/share.png"
                       alt="share"
                       className="h-5 w-5"
                     />
                   </div>
                   <div className="flex items-center justify-center w-8 h-8 rounded-md hover:bg-win11-glass-hover transition-colors duration-200">
                     <img
-                      src="/images/options/delete.png"
+                      src="/assets/icons/ui/delete.png"
                       alt="delete"
                       className="h-5 w-5"
                     />
@@ -261,7 +261,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                 <div className="flex h-full items-center w-72 justify-around border-win11-border border-r">
                   <div className="flex items-center justify-center h-full text-xs gap-1 opacity-45">
                     <img
-                      src="/images/options/sort.png"
+                      src="/assets/icons/ui/sort.png"
                       alt="sort"
                       className="w-5 h-5"
                     />
@@ -272,7 +272,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                   </div>
                   <div className="flex items-center justify-center h-full text-xs gap-1 opacity-80">
                     <img
-                      src="/images/options/view.png"
+                      src="/assets/icons/ui/view.png"
                       alt="view"
                       className="w-5 h-5"
                     />
@@ -283,7 +283,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                   </div>
                   <div className="flex items-center justify-center h-full text-xs gap-1 opacity-80">
                     <img
-                      src="/images/options/filter.png"
+                      src="/assets/icons/ui/filter.png"
                       alt="filter"
                       className="w-5 h-5"
                     />
@@ -294,14 +294,14 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                   </div>
                 </div>
                 <img
-                  src="/images/options/dots.png"
+                  src="/assets/icons/ui/dots.png"
                   alt="dots"
                   className="w-3.5 h-3.5 ml-4"
                 />
               </div>
               <div className="flex items-center mr-8 text-xs">
                 <img
-                  src="/images/options/details.png"
+                  src="/assets/icons/ui/details.png"
                   alt="details"
                   className="w-5 h-5 mr-1"
                 />
@@ -315,7 +315,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     <div className="border-b border-win11-border h-20">
                       <div className="flex items-center justify-center mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm">
                         <img
-                          src="/images/folders/home.png"
+                          src="/assets/icons/folders/home.png"
                           alt="details"
                           className="w-5 h-5 mr-1"
                         />
@@ -323,7 +323,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex items-center justify-center mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm">
                         <img
-                          src="/images/folders/gallery.png"
+                          src="/assets/icons/folders/gallery.png"
                           alt="details"
                           className="w-5 h-5 mr-1"
                         />
@@ -333,7 +333,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     <div className="mt-3.5 border-b border-win11-border h-52">
                       <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm">
                         <img
-                          src="/images/folders/Desktop.ico"
+                          src="/assets/icons/folders/Desktop.ico"
                           alt="Desktop"
                           className="w-5 h-5 mr-1"
                         />
@@ -344,7 +344,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm">
                         <img
-                          src="/images/folders/Downloads.ico"
+                          src="/assets/icons/folders/Downloads.ico"
                           alt="Downloads"
                           className="w-5 h-5 mr-1"
                         />
@@ -355,7 +355,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm">
                         <img
-                          src="/images/folders/Documents.ico"
+                          src="/assets/icons/folders/Documents.ico"
                           alt="Documents"
                           className="w-5 h-5 mr-1"
                         />
@@ -366,7 +366,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm">
                         <img
-                          src="/images/folders/Photos.ico"
+                          src="/assets/icons/folders/Photos.ico"
                           alt="Pictures"
                           className="w-5 h-5 mr-1"
                         />
@@ -377,7 +377,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm">
                         <img
-                          src="/images/folders/Music.ico"
+                          src="/assets/icons/folders/Music.ico"
                           alt="Music"
                           className="w-5 h-5 mr-1"
                         />
@@ -388,7 +388,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm">
                         <img
-                          src="/images/folders/Videos.ico"
+                          src="/assets/icons/folders/Videos.ico"
                           alt="Videos"
                           className="w-5 h-5 mr-1"
                         />
@@ -401,7 +401,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     <div className="mt-3.5 border-b border-win11-border h-52">
                       <div className="flex items-center pl-12 mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm relative">
                         <img
-                          src="/images/folders/Computer.ico"
+                          src="/assets/icons/folders/Computer.ico"
                           alt="This PC"
                           className="w-4 h-4 mr-1"
                         />
@@ -412,7 +412,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex items-center pl-12 mr-8 text-xs hover:bg-win11-glass-hover w-full h-8 rounded-sm relative">
                         <img
-                          src="/images/folders/Network.ico"
+                          src="/assets/icons/folders/Network.ico"
                           alt="Network"
                           className="w-4 h-4 mr-1"
                         />
@@ -433,7 +433,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     <div className="h-32 w-[87vh] mr-32 grid grid-cols-3 grid-rows-2">
                       <div className="flex justify-center items-center h-16 w-full hover:bg-win11-glass-hover rounded-md">
                         <img
-                          src="/images/folders/Desktop.ico"
+                          src="/assets/icons/folders/Desktop.ico"
                           alt="Desktop"
                           className="w-14 h-14 mr-4"
                         />
@@ -451,7 +451,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex justify-center items-center h-16 w-full hover:bg-win11-glass-hover rounded-md">
                         <img
-                          src="/images/folders/Downloads.ico"
+                          src="/assets/icons/folders/Downloads.ico"
                           alt="Downloads"
                           className="w-14 h-14 mr-4"
                         />
@@ -469,7 +469,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex justify-center items-center h-16 w-full hover:bg-win11-glass-hover rounded-md">
                         <img
-                          src="/images/folders/Documents.ico"
+                          src="/assets/icons/folders/Documents.ico"
                           alt="Documents"
                           className="w-14 h-14 mr-4"
                         />
@@ -487,7 +487,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex justify-center items-center h-16 w-full hover:bg-win11-glass-hover rounded-md">
                         <img
-                          src="/images/folders/Photos.ico"
+                          src="/assets/icons/folders/Photos.ico"
                           alt="Pictures"
                           className="w-14 h-14 mr-4"
                         />
@@ -505,7 +505,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex justify-center items-center h-16 w-full hover:bg-win11-glass-hover rounded-md">
                         <img
-                          src="/images/folders/Music.ico"
+                          src="/assets/icons/folders/Music.ico"
                           alt="Music"
                           className="w-14 h-14 mr-4"
                         />
@@ -523,7 +523,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                       </div>
                       <div className="flex justify-center items-center h-16 w-full hover:bg-win11-glass-hover rounded-md">
                         <img
-                          src="/images/folders/Videos.ico"
+                          src="/assets/icons/folders/Videos.ico"
                           alt="Videos"
                           className="w-14 h-14 mr-4"
                         />
@@ -566,7 +566,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/me.png"
+                      src="/assets/icons/folders/me.png"
                       alt="me"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -583,7 +583,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/edu.png"
+                      src="/assets/icons/folders/edu.png"
                       alt="edu"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -600,7 +600,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/skills.png"
+                      src="/assets/icons/folders/skills.png"
                       alt="skills"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -617,7 +617,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/projects.png"
+                      src="/assets/icons/folders/projects.png"
                       alt="Projects"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -634,7 +634,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/resume.png"
+                      src="/assets/icons/folders/resume.png"
                       alt="Resume"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -651,7 +651,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/resume.png"
+                      src="/assets/icons/folders/resume.png"
                       alt="CV"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -668,7 +668,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/edu.png"
+                      src="/assets/icons/folders/edu.png"
                       alt="Research"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -685,7 +685,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/projects.png"
+                      src="/assets/icons/folders/projects.png"
                       alt="Work"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -702,7 +702,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/management.png"
+                      src="/assets/icons/folders/management.png"
                       alt="Leadership"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -719,7 +719,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/edu.png"
+                      src="/assets/icons/folders/edu.png"
                       alt="Conferences"
                       className="w-5 h-5 mr-2.5"
                     />
@@ -736,7 +736,7 @@ const Explorer = ({ isExplorerOpen, toggleExplorer, aboutMe, bounds, minimizeWin
                     }}
                   >
                     <img
-                      src="/images/folders/skills.png"
+                      src="/assets/icons/folders/skills.png"
                       alt="Awards"
                       className="w-5 h-5 mr-2.5"
                     />

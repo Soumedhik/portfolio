@@ -17,7 +17,7 @@ function UserProfile({ name }) {
         <div className="avatar">
           <div className="w-24 rounded-full">
             <img
-              src="/images/external/loading-animation.gif"
+              src="/assets/icons/external/loading-animation.gif"
               alt="Profile"
               className="pointer-events-none"
             />

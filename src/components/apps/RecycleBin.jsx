@@ -93,7 +93,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
               <div className="flex justify-between items-center w-full">
                 <div className="pl-2 text-xs flex">
                   <img
-                    src={`/images/apps/recyclebin.png`}
+                    src={`/assets/icons/apps/recyclebin.png`}
                     alt="main icons"
                     className="w-5 h-5 mr-2"
                   />
@@ -145,7 +145,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
               <div className="flex items-center">
                 <div className="flex items-center justify-center w-24 h-full text-xs gap-1 border-neutral-700 border-r-[1.5px] opacity-45">
                   <img
-                    src="/images/options/new.png"
+                    src="/assets/icons/ui/new.png"
                     alt="new"
                     className="w-5 h-5"
                   />
@@ -156,32 +156,32 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                 </div>
                 <div className="flex h-full w-72 justify-around items-center border-neutral-700 border-r-[1.5px] opacity-45">
                   <img
-                    src="/images/options/cut.png"
+                    src="/assets/icons/ui/cut.png"
                     alt="cut"
                     className="h-5 w-5"
                   />
                   <img
-                    src="/images/options/copy.png"
+                    src="/assets/icons/ui/copy.png"
                     alt="copy"
                     className="h-5 w-5"
                   />
                   <img
-                    src="/images/options/paste.png"
+                    src="/assets/icons/ui/paste.png"
                     alt="paste"
                     className="h-7 w-7"
                   />
                   <img
-                    src="/images/options/rename.png"
+                    src="/assets/icons/ui/rename.png"
                     alt="rename"
                     className="h-5 w-5"
                   />
                   <img
-                    src="/images/options/share.png"
+                    src="/assets/icons/ui/share.png"
                     alt="share"
                     className="h-5 w-5"
                   />
                   <img
-                    src="/images/options/delete.png"
+                    src="/assets/icons/ui/delete.png"
                     alt="delete"
                     className="h-5 w-5"
                   />
@@ -189,7 +189,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                 <div className="flex h-full items-center w-72 justify-around border-neutral-700 border-r-[1.5px]">
                   <div className="flex items-center justify-center h-full text-xs gap-1 opacity-45">
                     <img
-                      src="/images/options/sort.png"
+                      src="/assets/icons/ui/sort.png"
                       alt="sort"
                       className="w-5 h-5"
                     />
@@ -200,7 +200,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex items-center justify-center h-full text-xs gap-1 opacity-80">
                     <img
-                      src="/images/options/view.png"
+                      src="/assets/icons/ui/view.png"
                       alt="view"
                       className="w-5 h-5"
                     />
@@ -211,7 +211,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex items-center justify-center h-full text-xs gap-1 opacity-80">
                     <img
-                      src="/images/options/filter.png"
+                      src="/assets/icons/ui/filter.png"
                       alt="filter"
                       className="w-5 h-5"
                     />
@@ -222,14 +222,14 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                 </div>
                 <img
-                  src="/images/options/dots.png"
+                  src="/assets/icons/ui/dots.png"
                   alt="dots"
                   className="w-3.5 h-3.5 ml-4"
                 />
               </div>
               <div className="flex items-center mr-8 text-xs">
                 <img
-                  src="/images/options/details.png"
+                  src="/assets/icons/ui/details.png"
                   alt="details"
                   className="w-5 h-5 mr-1"
                 />
@@ -241,7 +241,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                 <div className="border-b-[1.5px] border-neutral-700 h-20">
                   <div className="flex items-center justify-center mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm">
                     <img
-                      src="/images/folders/home.png"
+                      src="/assets/icons/folders/home.png"
                       alt="details"
                       className="w-5 h-5 mr-1"
                     />
@@ -249,7 +249,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex items-center justify-center mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm">
                     <img
-                      src="/images/folders/gallery.png"
+                      src="/assets/icons/folders/gallery.png"
                       alt="details"
                       className="w-5 h-5 mr-1"
                     />
@@ -259,7 +259,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                 <div className="mt-3.5 border-b-[1.5px] border-neutral-700 h-52">
                   <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm">
                     <img
-                      src="/images/folders/Desktop.ico"
+                      src="/assets/icons/folders/Desktop.ico"
                       alt="details"
                       className="w-5 h-5 mr-1"
                     />
@@ -270,7 +270,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm">
                     <img
-                      src="/images/folders/Downloads.ico"
+                      src="/assets/icons/folders/Downloads.ico"
                       alt="details"
                       className="w-5 h-5 mr-1"
                     />
@@ -281,7 +281,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm">
                     <img
-                      src="/images/folders/Documents.ico"
+                      src="/assets/icons/folders/Documents.ico"
                       alt="details"
                       className="w-5 h-5 mr-1"
                     />
@@ -292,7 +292,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm">
                     <img
-                      src="/images/folders/Photos.ico"
+                      src="/assets/icons/folders/Photos.ico"
                       alt="details"
                       className="w-5 h-5 mr-1"
                     />
@@ -303,7 +303,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm">
                     <img
-                      src="/images/folders/Music.ico"
+                      src="/assets/icons/folders/Music.ico"
                       alt="details"
                       className="w-5 h-5 mr-1"
                     />
@@ -314,7 +314,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex relative items-center pl-6 mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm">
                     <img
-                      src="/images/folders/Videos.ico"
+                      src="/assets/icons/folders/Videos.ico"
                       alt="details"
                       className="w-5 h-5 mr-1"
                     />
@@ -327,7 +327,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                 <div className="mt-3.5 border-b-[1.5px] border-neutral-700 h-52">
                   <div className="flex items-center pl-12 mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm relative">
                     <img
-                      src="/images/folders/Computer.ico"
+                      src="/assets/icons/folders/Computer.ico"
                       alt="details"
                       className="w-4 h-4 mr-1"
                     />
@@ -338,7 +338,7 @@ const RecycleBin = ({ isRecycleOpen, toggleRecycle, bounds, minimizeWindow, isMi
                   </div>
                   <div className="flex items-center pl-12 mr-8 text-xs hover:bg-neutral-700 w-full h-8 rounded-sm relative">
                     <img
-                      src="/images/folders/Network.ico"
+                      src="/assets/icons/folders/Network.ico"
                       alt="details"
                       className="w-4 h-4 mr-1"
                     />

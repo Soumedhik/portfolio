@@ -4,22 +4,20 @@
 
 ### 🎥 **New Video Background:**
 - **Source:** `C:\Users\sumit\Downloads\RESUME\RESUME Website Code\desktop_background.mp4`
-- **Destination:** `public/desktop_background.mp4`
+- **Destination:** `public/assets/backgrounds/desktop_background.mp4`
 - **Implementation:** Advanced VideoBackground component with fallback system
 
 ### 🖼️ **New Lockscreen:**
 - **Source:** `C:\Users\sumit\Downloads\RESUME\RESUME Website Code\lockscreen.jpg`
-- **Destinations:** 
-  - `public/lockscreen.jpg` (for web access)
-  - `data/lockscreen.jpg` (for data reference)
+- **Destination:** `public/assets/backgrounds/lockscreen.jpg`
 
 ## 🚀 **VideoBackground Component Features:**
 
 ### 🎬 **Advanced Video Handling:**
 ```jsx
 <VideoBackground 
-  src="/desktop_background.mp4"
-  fallbackImage="/wallpaper.jpg"
+  src="/assets/backgrounds/desktop_background.mp4"
+  fallbackImage="/assets/backgrounds/wallpaper.jpg"
   className="win11-desktop-background"
 />
 ```
@@ -52,8 +50,8 @@ import VideoBackground from '../components/utilities/VideoBackground';
 
 // Rendered before desktop content
 <VideoBackground 
-  src="/desktop_background.mp4"
-  fallbackImage="/wallpaper.jpg"
+  src="/assets/backgrounds/desktop_background.mp4"
+  fallbackImage="/assets/backgrounds/wallpaper.jpg"
   className="win11-desktop-background"
 />
 ```

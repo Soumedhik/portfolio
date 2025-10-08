@@ -354,10 +354,10 @@ function Main({ isMobile = false }) {
 
   const images = useMemo(
     () => [
-      "/images/fun/1.gif",
-      "/images/fun/2.jpg",
-      "/images/fun/3.jpg",
-      "/images/fun/4.jpg",
+  "/assets/media/fun/1.gif",
+  "/assets/media/fun/2.jpg",
+  "/assets/media/fun/3.jpg",
+  "/assets/media/fun/4.jpg",
     ],
     []
   );
@@ -490,7 +490,7 @@ function Main({ isMobile = false }) {
           {actionType === "shutdown" && (
             <div className="flex flex-col gap-4 justify-center items-center w-full h-screen">
               <img
-                src="/images/fun/xp.jpg"
+                src="/assets/media/fun/xp.jpg"
                 alt="Random"
                 className="w-1/2 h-1/2 object-cover rounded-lg shadow-lg"
               />
@@ -501,8 +501,8 @@ function Main({ isMobile = false }) {
         </div>
       )}
       <VideoBackground 
-        src="/desktop_background.mp4"
-        fallbackImage="/wallpaper.jpg"
+        src="/assets/backgrounds/desktop_background.mp4"
+        fallbackImage="/assets/backgrounds/wallpaper.jpg"
         className="win11-desktop-background"
       />
     <SoundEffects />
@@ -851,7 +851,7 @@ function Main({ isMobile = false }) {
               onDoubleClick={() => toggleWindow("app", "terminal")}
             >
               <img
-                src="images/apps/terminal.png"
+                src="/assets/icons/apps/terminal.png"
                 alt="terminal"
                 className="w-10 h-10"
               />

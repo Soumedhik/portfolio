@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState, memo } from 'react';
 import { motion } from 'framer-motion';
 
 const VideoBackground = memo(({ 
-  src = "/desktop_background.mp4",
-  fallbackImage = "/wallpaper.jpg",
+  src = "/assets/backgrounds/desktop_background.mp4",
+  fallbackImage = "/assets/backgrounds/wallpaper.jpg",
   className = "",
   style = {}
 }) => {

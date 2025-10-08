@@ -102,7 +102,7 @@ export default function Torch({ input, setInput }) {
           ></motion.div>
           <div className="w-full h-screen absolute top-0 bg-transparent z-50">
             <img
-              src="images/apps/switch.png"
+              src="/assets/icons/apps/switch.png"
               alt="switch"
               className="h-10 w-10 z-50 absolute hover:cursor-pointer"
               style={{ top: randomPosition.top, left: randomPosition.left }}

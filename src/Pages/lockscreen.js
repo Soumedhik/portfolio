@@ -21,7 +21,7 @@ function Lockscreen({ isMobile = false }) {
         className={`absolute bg-black h-screen w-full ${isMobile ? '' : 'blur-sm'}`}
         style={{
           background:
-            "url(/lockscreen.jpg) no-repeat center center",
+            "url(/assets/backgrounds/lockscreen.jpg) no-repeat center center",
           backgroundSize: "cover",
         }}
       />

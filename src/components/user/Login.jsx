@@ -148,7 +148,7 @@ function Login() {
         <div className="aspect-square w-32 h-36 mb-8">
           <div className="w-32 h-32 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
             <img 
-              src="/profile.jpg" 
+              src="/assets/branding/profile.jpg" 
               alt="Soumedhik Bharati"
               className="w-full h-full object-cover"
               onError={(e) => {

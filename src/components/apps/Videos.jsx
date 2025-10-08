@@ -99,7 +99,7 @@ const Videos = memo(({ isAppOpen, toggleVideos, bounds, minimizeWindow, isMinimi
           <div className="title-bar glass-titlebar">
             <div className="h-9 flex items-center justify-between px-3 select-none">
               <div className="flex items-center gap-2 font-normal titlebar-section">
-                <img src="/images/apps/videos.png" alt="Videos" className="w-4 h-4" />
+                <img src="/assets/icons/apps/videos.png" alt="Videos" className="w-4 h-4" />
                 <span>Videos</span>
               </div>
               <div className="flex items-center titlebar-section">

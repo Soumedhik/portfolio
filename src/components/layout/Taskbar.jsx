@@ -108,7 +108,7 @@ export default function Taskbar({
             title="Start"
           >
             <img
-              src="/images/apps/windows.png"
+              src="/assets/icons/apps/windows.png"
               alt="windows_logo"
               className={`taskbar-icon ${mobilePortrait ? 'h-3' : isMobileLandscape ? 'h-5' : isTablet ? 'h-6' : 'h-8'}`}
               style={{ imageRendering: 'auto' }}
@@ -127,7 +127,7 @@ export default function Taskbar({
             title={minimizedWindows.explorer ? 'File Explorer (Minimized) - Click to restore' : 'File Explorer'}
           >
             <img
-              src="/images/apps/explorer.png"
+              src="/assets/icons/apps/explorer.png"
               alt="File Explorer"
               className={`taskbar-icon ${mobilePortrait ? 'h-3' : isMobileLandscape ? 'h-5' : isTablet ? 'h-5' : 'h-7'}`}
               style={{ imageRendering: 'auto' }}
@@ -146,7 +146,7 @@ export default function Taskbar({
             title={minimizedWindows.browser ? 'Microsoft Edge (Minimized) - Click to restore' : 'Microsoft Edge'}
           >
             <img
-              src="/images/apps/edge.png"
+              src="/assets/icons/apps/edge.png"
               alt="Microsoft Edge"
               className={`taskbar-icon ${mobilePortrait ? 'h-3' : isMobileLandscape ? 'h-5' : isTablet ? 'h-6' : 'h-8'}`}
               style={{ imageRendering: 'auto' }}

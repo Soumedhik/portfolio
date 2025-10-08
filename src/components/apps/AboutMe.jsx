@@ -205,7 +205,7 @@ const AboutMe = ({ page, handleDivClick, expandedDiv }) => {
                         transition={{ duration: 0.3 }}
                       />
                       <motion.img
-                        src="/images/4.jpg"
+                        src="/assets/media/highlights/timeline-feature.jpg"
                         className="relative z-10 w-80 h-80 lg:w-96 lg:h-96 rounded-2xl shadow-2xl object-cover border border-white/10 backdrop-blur-sm"
                         alt="Soumedhik Bharati - Profile"
                         whileHover={{ 
@@ -468,7 +468,7 @@ const AboutMe = ({ page, handleDivClick, expandedDiv }) => {
                   onDoubleClick={() => handleDivClick(1)}
                 >
                   <img
-                    src="/images/apps/folder.png"
+                    src="/assets/icons/apps/folder.png"
                     alt="Specializations"
                     className="w-12 h-12"
                   />
@@ -482,7 +482,7 @@ const AboutMe = ({ page, handleDivClick, expandedDiv }) => {
                   onDoubleClick={() => handleDivClick(2)}
                 >
                   <img
-                    src="/images/apps/folder.png"
+                    src="/assets/icons/apps/folder.png"
                     alt="Programming"
                     className="w-12 h-12"
                   />
@@ -496,7 +496,7 @@ const AboutMe = ({ page, handleDivClick, expandedDiv }) => {
                   onDoubleClick={() => handleDivClick(3)}
                 >
                   <img
-                    src="/images/apps/folder.png"
+                    src="/assets/icons/apps/folder.png"
                     alt="Technical"
                     className="w-12 h-12"
                   />
@@ -510,7 +510,7 @@ const AboutMe = ({ page, handleDivClick, expandedDiv }) => {
                   onDoubleClick={() => handleDivClick(4)}
                 >
                   <img
-                    src="/images/apps/folder.png"
+                    src="/assets/icons/apps/folder.png"
                     alt="Research"
                     className="w-12 h-12"
                   />
@@ -524,7 +524,7 @@ const AboutMe = ({ page, handleDivClick, expandedDiv }) => {
                   onDoubleClick={() => handleDivClick(5)}
                 >
                   <img
-                    src="/images/apps/folder.png"
+                    src="/assets/icons/apps/folder.png"
                     alt="Soft"
                     className="w-12 h-12"
                   />

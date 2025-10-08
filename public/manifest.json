@@ -21,7 +21,7 @@
       "purpose": "any maskable"
     },
     {
-      "src": "profile.jpg",
+      "src": "assets/branding/profile.jpg",
       "type": "image/jpeg",
       "sizes": "512x512",
       "purpose": "any"

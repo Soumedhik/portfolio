@@ -9,11 +9,10 @@ if ('requestIdleCallback' in window) {
   requestIdleCallback(() => {
     const preloadAssets = () => {
       const assets = [
-
-        '/images/apps/chrome.png',
-        '/images/apps/vscode.png',
-        '/images/apps/edge.png',
-        '/images/apps/settings.png'
+        '/assets/icons/apps/chrome.png',
+        '/assets/icons/apps/edge.png',
+        '/assets/icons/apps/explorer.png',
+        '/assets/icons/apps/videos.png'
       ];
       
       assets.forEach(src => {

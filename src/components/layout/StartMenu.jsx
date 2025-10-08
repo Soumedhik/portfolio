@@ -48,119 +48,119 @@ function StartMenu({
             <div id="second-app-container">
               <div className="app-icon">
                 <img
-                  src="/images/external/edge-icon.png"
+                  src="/assets/icons/external/edge-icon.png"
                   alt="edge icon"
                 />
                 <span>Edge</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/word-icon.png"
+                  src="/assets/icons/external/word-icon.png"
                   alt="word icon"
                 />
                 <span>Word</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/excel-icon.png"
+                  src="/assets/icons/external/excel-icon.png"
                   alt="excel icon"
                 />
                 <span>Excel</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/powerpoint-icon.png"
+                  src="/assets/icons/external/powerpoint-icon.png"
                   alt="powerpoint icon"
                 />
                 <span>Powerpoint</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/ms-office.ico"
+                  src="/assets/icons/external/ms-office.ico"
                   alt="office icon microsoft"
                 />
                 <span>Office</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/calendar-icon.png"
+                  src="/assets/icons/external/calendar-icon.png"
                   alt="calendar icon"
                 />
                 <span>Calender</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/ms-store-icon.png"
+                  src="/assets/icons/external/ms-store-icon.png"
                   alt="microsoft store icon"
                 />
                 <span>Microsoft Store</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/ms-foto-icon.ico"
+                  src="/assets/icons/external/ms-foto-icon.ico"
                   alt="galleria icon by microsoft 11"
                 />
                 <span>Photos</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/ms-video-icon.ico"
+                  src="/assets/icons/external/ms-video-icon.ico"
                   alt="microsoft video icon by microsoft"
                 />
                 <span>Film & TV</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/Paint-2D.ico"
+                  src="/assets/icons/external/Paint-2D.ico"
                   alt="paint 2d icon by microsoft"
                 />
                 <span>Paint</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/Paint-3D.ico"
+                  src="/assets/icons/external/Paint-3D.ico"
                   alt="paint 2d icon by microsoft"
                 />
                 <span>Paint 3D</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/Whiteboard.ico"
+                  src="/assets/icons/external/Whiteboard.ico"
                   alt="whiteboard icon by microsoft"
                 />
                 <span>WhiteBoard</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/ms-impostazioni-icon.ico"
+                  src="/assets/icons/external/ms-impostazioni-icon.ico"
                   alt="impostazioni icon by microsoft"
                 />
                 <span>Settings</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/ms-skype.ico"
+                  src="/assets/icons/external/ms-skype.ico"
                   alt="skype icon by microsoft"
                 />
                 <span>Skype</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/vs-code.ico"
+                  src="/assets/icons/external/vs-code.ico"
                   alt="vs code icon by microsoft"
                 />
                 <span>VS code</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/vs-normal.ico"
+                  src="/assets/icons/external/vs-normal.ico"
                   alt="visual Studio normal icon by microsoft"
                 />
                 <span>Visual Studio</span>
               </div>
               <div className="app-icon">
                 <img
-                  src="/images/external/ms-file-explorer.ico"
+                  src="/assets/icons/external/ms-file-explorer.ico"
                   alt="file Explorer icon by microsoft"
                 />
                 <span>File Explorer</span>
@@ -187,7 +187,7 @@ function StartMenu({
               <div className="recent">
                 <div>
                   <img
-                    src="/images/external/vs-code.ico"
+                    src="/assets/icons/external/vs-code.ico"
                     alt="VS code icon"
                   />
                 </div>
@@ -199,7 +199,7 @@ function StartMenu({
               <div className="recent">
                 <div>
                   <img
-                    src="/images/external/vs-normal.ico"
+                    src="/assets/icons/external/vs-normal.ico"
                     alt="visual studio icon"
                   />
                 </div>
@@ -211,7 +211,7 @@ function StartMenu({
               <div className="recent">
                 <div>
                   <img
-                    src="/images/external/Photos-folder.ico"
+                    src="/assets/icons/external/Photos-folder.ico"
                     alt="folder microsoft"
                   />
                 </div>
